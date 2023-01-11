@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 1</title>
+    <!-- <link rel="stylesheet" href="style2.css"> -->
+    <style>
+        body {
+            font-family: cursive;
+        }
+
+        header {
+            background-color: chartreuse;
+            color: crimson;
+            padding: 15px 0px 20px 40px;
+        }
+
+        #header-title {
+            padding: 10px 0px;
+        }
+
+        #content {
+            padding: 15px 0px 0px 45px;
+        }
+
+        .list-item {
+            border-bottom: 2px solid blue;
+            padding: 10px 0px;
+        }
+
+        form {
+            padding-top: 20px;
+        }
+
+        form>input,
+        button {
+            padding: 5px;
+        }
+
+        .abc {
+            color: red;
+            background-color: rgb(218, 195, 195);
+            padding: auto auto auto auto;
+        }
+
+        * {
+            padding: 20px 10 px 20px 10px;
+            margin: 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h2 id="header-title">Ashutosh</h2>
+        <p id="tagline">Frontend Web Developer</p>
+    </header>
+
+    <div id="content" class="abc">
+        <h4>Skills</h4>
+        <ul id="items">
+            <li class="list-item"> C++ </li>
+            <li class="list-item"> DSA </li>
+            <li class="list-item"> DBMS </li>
+            <li class="list-item"> Fronted </li>
+            <li class="list-item"> Problem Solving </li>
+
+        </ul>
+        <form>
+            <input type="text">
+            <button>SUBMIT</button>
+        </form>
+    </div>
+
+
+    <!-- <script src="myscript.js"></script> -->
+    <script>
+        /*
+
+// getElementById
+let headerTitle = document.getElementById('header-title');
+console.log(headerTitle);
+
+headerTitle.textContent='Ashutosh Pandey';
+headerTitle.innerText='Pandey Ashutosh';
+
+let header=document.getElementById('header');
+header.style.borderBottom='10px solid #000';
+
+// getElementByClass
+/*
+let items=document.getElementsByClassName('list-item');
+items[2].textContent='Computer Networks';
+items[3].style.fontWeight="bold";
+items[4].style.color='blue';
+items[4].style.backgroundColor='yellow';
+
+for(let i=3;i<items.length;i++){
+    items[i].style.backgroundColor='skyblue';
+}
+
+
+// getElementByTag 
+// these both are approxily similar
+let li=document.getElementsByClassName('list-item');
+li[2].textContent='Computer Networks';
+li[3].style.fontWeight="bold";
+li[4].style.color='blue';
+li[4].style.backgroundColor='yellow';
+
+for(let i=3;i<li.length;i++){
+    li[i].style.backgroundColor='skyblue';
+}
+*/
+
+        // querySelector
+        let headline = document.querySelector('#tagline');
+        headline.style.color = 'white';
+
+        let items = document.querySelector('.list-item:last-child');
+        items.style.color = 'blue';
+
+// we can also select class , input id , tagline
+    </script>
+</body>
+
+</html>
